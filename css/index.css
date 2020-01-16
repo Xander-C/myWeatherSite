@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.logo{
+    float: left;
+    margin-top: 5px;
+    height: 50px;
+    margin-left: 8%;
+}
+.main-container{
+    border: 0;
+    margin: 0;
+    height: 500px;
+    padding: 0;
+    background: #65aaf8; /* Old browsers */
+    background: -moz-linear-gradient(left, #65aaf8 0%, #6581f6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #65aaf8 0%,#6581f6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #65aaf8 0%,#6581f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65aaf8', endColorstr='#6581f6',GradientType=1 ); /* IE6-9 */
+}
+.top-container{
+    border-bottom: #fff solid 1px;
+    height: 60px;
+}
+.city-container{
+    float: right;
+    margin-right: 8%;
+}
+.now-city{
+    line-height: 60px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+#input{
+    border: none;
+    background: rgba(255,255,255,0.2);
+    border-radius: 49px;
+    padding: 5px 13px;
+    width: 251px;
+    height: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.position-icon{
+    content: '';
+    float: left;
+    height: 16px;
+    width: 16px;
+    background-image: url(/images/icon.png);
+    background-position: -216px -126px;
+    background-size: 234px 212px;
+    margin-right: 7px;
+    margin-top: 22px;
+}
+.today{
+    margin-top: 80px;
+    margin-left: 150px;
+    color: white;
+}
+#today-temperture{
+    font-size: 85px;
+}
+#today-weather{
+    font-size: 30px;
+}
+.today-detail{
+    margin-top: 15px;
+    font-size: 20px;
+}
+#wind{
+    margin-right: 20px;
+}
+#humidity{
+    margin-right: 20px;
+}

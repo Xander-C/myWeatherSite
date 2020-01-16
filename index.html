@@ -1,15 +1,37 @@
-!
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>weather-site</title>
+  <title>myWeatherSite</title>
   <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-
+    <div class="main-container">
+        <div class="top-container">
+            <img src="/images/logo.png" class="logo">
+            <div class = "city-container">
+                <span class="position-icon"></span>
+                <span class="now-city">广西壮族自治区&nbsp;梧州市</span>
+                <input id="input" type="input" placeholder="江苏省 南京市">
+            </div>
+        </div>
+        <div class="today">
+            <div class="summerize">
+                <span id="today-temperture">10°</span>
+                <span id="today-weather">阴</span>
+            </div>
+            <div class="today-detail">
+                <span id="wind-icon"></span>
+                <span id="wind">北风&nbsp;两级</span>
+                <span id="humidity-icon"></span>
+                <span id="humidity">湿度&nbsp;71%</span>
+                <span id="baro-icon"></span>
+                <span id="baro">气压&nbsp;1009.0hPa</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
