@@ -3,25 +3,25 @@
     margin: 0;
     border: 0;
 }
+body{
+    background-color: #f6f9fe;
+}
 .logo{
     float: left;
     margin-top: 5px;
     height: 50px;
-    margin-left: 8%;
+    margin-left: 10%;
 }
 .main-container{
     border: 0;
     margin: 0;
     height: 500px;
     padding: 0;
-    background: #65aaf8; /* Old browsers */
-    background: -moz-linear-gradient(left, #65aaf8 0%, #6581f6 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #65aaf8 0%,#6581f6 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #65aaf8 0%,#6581f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65aaf8', endColorstr='#6581f6',GradientType=1 ); /* IE6-9 */
+    background-image:url(/images/background.jpg);
+    background-position: 50% 0px;                                     /*阴天50%*/
 }
 .top-container{
-    border-bottom: #fff solid 1px;
+    border-bottom:rgba(255, 255, 255, 0.2) solid 1px;
     height: 60px;
 }
 .city-container{
@@ -43,7 +43,10 @@
     width: 251px;
     height: 20px;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
+}
+#input::-webkit-input-placeholder{
+    color: white;
+    opacity: 0.7;
 }
 .position-icon{
     content: '';
@@ -55,6 +58,14 @@
     background-size: 234px 212px;
     margin-right: 7px;
     margin-top: 22px;
+}
+.word{
+    float: left;
+}
+#weather-icon{
+    float: right;
+    margin-right: 300px;
+    margin-top: 30px;
 }
 .today{
     margin-top: 80px;
@@ -71,9 +82,96 @@
     margin-top: 15px;
     font-size: 20px;
 }
+#wind-icon{
+    float: left;
+    height: 18px;
+    width: 18px;
+    background-image: url(/images/icon.png);
+    background-position: -192px -166px;
+    background-size: 234px 212px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
 #wind{
+    float: left;
     margin-right: 20px;
+}
+#humidity-icon{
+    float: left;
+    height: 18px;
+    width: 18px;
+    background-image: url(/images/icon.png);
+    background-position: -192px -120px;
+    background-size: 234px 212px;
+    margin-top: 5px;
+    margin-right: 10px;
 }
 #humidity{
     margin-right: 20px;
+    float: left;
+}
+#baro-icon{
+    float: left;
+    height: 18px;
+    width: 18px;
+    background-image: url(/images/icon.png);
+    background-position: -192px -97px;
+    background-size: 234px 212px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+#baro{
+    float: left;
+}
+.one-sentence{
+    float: left;
+    margin-top: 20px;
+    font-size: 20px;
+}
+#sentence-key{
+    float: right;
+    height: 22px;
+    width: 22px;
+    background-image: url(/images/icon.png);
+    background-position: -120px -190px;
+    background-size: 234px 212px;
+    margin-top: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.detail-container{
+    background-attachment:scroll;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow:rgba(0, 0, 0, 0.08) 0px 0px 14px 0px;
+    color: rgba(0, 0, 0, 0.78);
+    font-size:12px;
+}
+#hours-container{
+    float: left;
+    margin-left: 10%;
+    margin-top: 220px;
+    height: 150px;
+    width: 1200px;
+}
+#hours-title{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.hours{
+    float: left;
+    width: 60px;
+    margin-left: 37px;
+    text-align: center;
+}
+.hours-time{
+    width: 40px;
+}
+.hours-icon{
+    float: left;
+    width: 40px;
+}
+.hours-tempture{
+    width: 40px;
 }

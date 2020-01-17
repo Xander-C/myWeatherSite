@@ -1,37 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>myWeatherSite</title>
-  <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myWeatherSite</title>
+    <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
     <div class="main-container">
         <div class="top-container">
             <img src="/images/logo.png" class="logo">
-            <div class = "city-container">
+            <div class="city-container">
                 <span class="position-icon"></span>
                 <span class="now-city">广西壮族自治区&nbsp;梧州市</span>
                 <input id="input" type="input" placeholder="江苏省 南京市">
             </div>
         </div>
         <div class="today">
-            <div class="summerize">
-                <span id="today-temperture">10°</span>
-                <span id="today-weather">阴</span>
+            <div class="word">
+                <div class="summerize">
+                    <span id="today-temperture">10°</span>
+                    <span id="today-weather">阴</span>
+                </div>
+                <div class="today-detail">
+                    <span id="wind-icon"></span>
+                    <span id="wind">北风&nbsp;两级</span>
+                    <span id="humidity-icon"></span>
+                    <span id="humidity">湿度&nbsp;71%</span>
+                    <span id="baro-icon"></span>
+                    <span id="baro">气压&nbsp;1009.0hPa</span>
+                </div>
+                <div class="one-sentence">
+                    <span>●</span>
+                    <span id="sentence">梦比现实更易侵蚀人的精神，刻意准备的梦是危险的。</span>
+                    <span id="sentence-key"></span>
+                </div>
             </div>
-            <div class="today-detail">
-                <span id="wind-icon"></span>
-                <span id="wind">北风&nbsp;两级</span>
-                <span id="humidity-icon"></span>
-                <span id="humidity">湿度&nbsp;71%</span>
-                <span id="baro-icon"></span>
-                <span id="baro">气压&nbsp;1009.0hPa</span>
+            <img id="weather-icon" src="/images/Cloudy(134x134).png">
+        </div>
+        <div class="detail">
+            <div class="detail-container" id="hours-container">
+                <div id="hours-title">●&nbsp;逐小时预报</div>
+                <div id="hours">
+                    <div class="hours">
+                        <div class="hours-time">14:00</div>
+                        <img class="hours-icon" src="/images/Cloudy(60x60).png">
+                        <div class="hours-tempture">11℃</div>
+                    </div>
+                    <div class="hours">
+                        <div class="hours-time">14:00</div>
+                        <img class="hours-icon" src="/images/Cloudy(60x60).png">
+                        <div class="hours-tempture">11℃</div>
+                    </div>
+                    <div class="hours">
+                        <div class="hours-time">14:00</div>
+                        <img class="hours-icon" src="/images/Cloudy(60x60).png">
+                        <div class="hours-tempture">11℃</div>
+                    </div>
+                    <div class="hours">
+                        <div class="hours-time">14:00</div>
+                        <img class="hours-icon" src="/images/Cloudy(60x60).png">
+                        <div class="hours-tempture">11℃</div>
+                    </div>
+                    <div class="hours">
+                        <div class="hours-time">14:00</div>
+                        <img class="hours-icon" src="/images/Cloudy(60x60).png">
+                        <div class="hours-tempture">11℃</div>
+                    </div>
+                    <div class="hours">
+                        <div class="hours-time">14:00</div>
+                        <img class="hours-icon" src="/images/Cloudy(60x60).png">
+                        <div class="hours-tempture">11℃</div>
+                    </div>
+                    <div class="hours">
+                        <div class="hours-time">14:00</div>
+                        <img class="hours-icon" src="/images/Cloudy(60x60).png">
+                        <div class="hours-tempture">11℃</div>
+                    </div>
+                    <div class="hours">
+                        <div class="hours-time">14:00</div>
+                        <img class="hours-icon" src="/images/Cloudy(60x60).png">
+                        <div class="hours-tempture">11℃</div>
+                    </div>
+                    <div class="hours">
+                        <div class="hours-time">14:00</div>
+                        <img class="hours-icon" src="/images/Cloudy(60x60).png">
+                        <div class="hours-tempture">11℃</div>
+                    </div>
+                    <div class="hours">
+                        <div class="hours-time">14:00</div>
+                        <img class="hours-icon" src="/images/Cloudy(60x60).png">
+                        <div class="hours-tempture">11℃</div>
+                    </div>
+                    <div class="hours">
+                        <div class="hours-time">14:00</div>
+                        <img class="hours-icon"src="/images/Cloudy(60x60).png">
+                        <div class="hours-tempture">11℃</div>
+                    </div>
+                    <div class="hours">
+                        <div class="hours-time">14:00</div>
+                        <img class="hours-icon" src="/images/Cloudy(60x60).png">
+                        <div class="hours-tempture">11℃</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="detail-container" id="week">
+
+            </div>
+            <div class="lifeIndex">
+                <div class="detail-container"></div>
+                <div class="detail-container"></div>
+                <div class="detail-container"></div>
+                <div class="detail-container"></div>
+                <div class="detail-container"></div>
+                <div class="detail-container"></div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
