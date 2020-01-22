@@ -28,7 +28,7 @@ body{
     float: right;
     margin-right: 8%;
 }
-.now-city{
+#now-city{
     line-height: 60px;
     margin-right: 10px;
     font-size: 16px;
@@ -43,10 +43,22 @@ body{
     width: 251px;
     height: 20px;
     font-size: 14px;
+    color: white;
 }
 #input::-webkit-input-placeholder{
     color: white;
     opacity: 0.7;
+}
+#search-city{
+    border: none;
+    background: rgba(255,255,255,0.7);
+    border-radius: 49px;
+    padding: 5px 13px;
+    width: 60px;
+    height: 28px;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
 }
 .position-icon{
     content: '';
@@ -151,19 +163,21 @@ body{
     float: left;
     margin-left: 10%;
     margin-top: 220px;
-    height: 150px;
+    height: 180px;
     width: 1200px;
 }
 #hours-title{
     font-size: 18px;
     margin-top: 20px;
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 .hours{
     float: left;
     width: 60px;
     margin-left: 37px;
     text-align: center;
+    font-size: 16px;
 }
 .hours-time{
     width: 40px;
@@ -174,4 +188,36 @@ body{
 }
 .hours-tempture{
     width: 40px;
+}
+#week-container{
+    float: left;
+    width: 740px;
+    height: 492px;
+    margin-left: 10%;
+    margin-top: 40px;
+}
+#livingIndex-container{
+    margin-top: 40px;
+    margin-right: 10%;
+    float: right;
+    width: 430px;
+    position: relative;
+}
+.livingIndex-title{
+    float: left;
+    color: rgba(0, 0, 0, 0.78);
+    font-size: 20px ;
+    margin-bottom: 20px;
+}
+.livingIndexDetailLeft{
+    margin-top: 20px;
+    float: left;
+    height: 136px;
+    width: 47.5%;
+}
+.livingIndexDetailRight{
+    margin-top: 20px;
+    float: right;
+    height: 136px;
+    width: 47.5%;
 }

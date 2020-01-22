@@ -16,8 +16,9 @@
             <img src="/images/logo.png" class="logo">
             <div class="city-container">
                 <span class="position-icon"></span>
-                <span class="now-city">广西壮族自治区&nbsp;梧州市</span>
-                <input id="input" type="input" placeholder="江苏省 南京市">
+                <span id="now-city">广西&nbsp;梧州</span>
+                <input id="input" type="input" placeholder="江苏 南京">
+                <button id="search-city">搜索</button>
             </div>
         </div>
         <div class="today">
@@ -106,22 +107,23 @@
                         <img class="hours-icon" src="/images/Cloudy(60x60).png">
                         <div class="hours-tempture">11℃</div>
                     </div>
-
                 </div>
             </div>
-            <div class="detail-container" id="week">
+            <div class="detail-container" id="week-container">
 
             </div>
-            <div class="lifeIndex">
-                <div class="detail-container"></div>
-                <div class="detail-container"></div>
-                <div class="detail-container"></div>
-                <div class="detail-container"></div>
-                <div class="detail-container"></div>
-                <div class="detail-container"></div>
+            <div id="livingIndex-container">
+                <div id="livingIndex-title">●&nbsp;生活指数</div>
+                <div class="detail-container livingIndexDetailLeft"></div>
+                <div class="detail-container livingIndexDetailRight"></div>
+                <div class="detail-container livingIndexDetailLeft"></div>
+                <div class="detail-container livingIndexDetailRight"></div>
+                <div class="detail-container livingIndexDetailLeft"></div>
+                <div class="detail-container livingIndexDetailRight"></div>
             </div>
         </div>
     </div>
+    <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
