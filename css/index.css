@@ -12,6 +12,11 @@ body{
     height: 50px;
     margin-left: 10%;
 }
+.flash-infinite{
+  animation-name: flash;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
 .main-container{
     border: 0;
     margin: 0;
