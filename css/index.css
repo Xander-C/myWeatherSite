@@ -79,18 +79,18 @@ body{
     margin-right: 300px;
     margin-top: 30px;
 }
-.today{
+.now{
     margin-top: 80px;
     margin-left: 150px;
     color: white;
 }
-#today-temperture{
+#now-temp{
     font-size: 85px;
 }
-#today-weather{
+#now-weather{
     font-size: 30px;
 }
-.today-detail{
+.now-detail{
     margin-top: 15px;
     font-size: 20px;
 }
