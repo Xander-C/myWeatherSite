@@ -40,12 +40,17 @@ async function handleFetchWeather() {
     nowWeatherElement.innerHTML = hoursData.data.forecast_1h["0"].weather;
     WindElement.innerHTML = hoursData.data.forecast_1h["0"].wind_direction + "&nbsp;" + hoursData.data.forecast_1h["0"].wind_power + "级";
     for (var i = 0; i < 12; i++) {
-        // let pointer = hoursElement.firstChild;
-        const timeIndex = (i) => `#${i}time`
-        const dataIndex = (i) => `${i}`
-        let time = hoursData.data.forecast_1h[dataIndex(i)].update_time.slice(7, 9);
-        // pointer = pointer.firstChild;
-        document.querySelector("#1time").innerHTML = time + ":00";
+        const timeIndex = (i) => `#time${i}`;
+        const iconIndex = (i) => `#icon${i}`;
+        const dataIndex = (i) => `${i}`;
+        const creatSrc = (day, code) => `/icon/big/${day}/${code}.png`
+        let time = hoursData.data.forecast_1h[dataIndex(i)].update_time.slice(-6, -4);
+        let day = "day";
+        if(time>18||time<6) day = "night"
+        const timeElement = document.querySelector(timeIndex(i));
+        timeElement.innerHTML = time + ":00";
+        const iconElement = document.querySelector(iconIndex(i));
+        iconElement.src = creatSrc(day, hoursData.data.forecast_1h[dataIndex(i)].weather_code);
     }
     bodyElement.classList.remove("flash-infinite");
 }
