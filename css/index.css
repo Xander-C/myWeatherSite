@@ -12,11 +12,11 @@ body{
     height: 50px;
     margin-left: 10%;
 }
-.flash-infinite{
+/* .flash-infinite{
   animation-name: flash;
   animation-iteration-count: infinite;
   animation-duration: 2s;
-}
+} */
 .main-container{
     border: 0;
     margin: 0;
@@ -38,7 +38,6 @@ body{
     margin-right: 10px;
     font-size: 16px;
     color: #fff;
-    cursor: pointer;
 }
 #input{
     border: none;
@@ -171,11 +170,43 @@ body{
     height: 180px;
     width: 1200px;
 }
+#hours-title-container{
+    height: 65px;
+    display: block;
+}
 #hours-title{
+    float: left;
     font-size: 18px;
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
+}
+#hours-down{
+    margin-right: 50px;
+    margin-top: 20px;
+    float: right;
+    height: 24px;
+    width: 24px;
+    background-image: url(/images/icon.png);
+    background-position: -190px -0px;
+    background-size: 234px 212px;
+    cursor: pointer;
+}
+#hours-down:hover{
+    background-position: -190px -25px;
+}
+#hours-up{
+    margin-top: 20px;
+    float: right;
+    height: 24px;
+    width: 24px;
+    background-image: url(/images/icon.png);
+    background-position: -136px -154px;
+    background-size: 234px 212px;
+    cursor: pointer;
+}
+#hours-up:hover{
+    background-position: -161px -154px;
 }
 .hours{
     float: left;
