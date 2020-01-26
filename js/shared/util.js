@@ -28,3 +28,57 @@ export function createAnimation(element, animationClassName,duration=0){
     setTimeout(stopAnimation, duration);
   }
 }
+
+
+
+export function displayHours(hoursData, page=0) {
+    const timeID = (i) => `#time${i}`;
+    const iconID = (i) => `#icon${i}`;
+    const degreeID = (i) => `#degree${i}`;
+    const dataIndex = (i) => `${i}`;
+    const creatSrc = (day, code) => `./icon/little/${day}/${code}.png`
+    for (let i = 0 ; i < 12 ; i++) {
+        const timeElement = document.querySelector(timeID(i));
+        const iconElement = document.querySelector(iconID(i));
+        const degreeElement = document.querySelector(degreeID(i));
+        const time = hoursData.data.forecast_1h[dataIndex(i+page*12)].update_time.slice(-6, -4);
+        let day = "day";
+        if(time>18||time<6) day = "night"
+        timeElement.innerHTML = time + ":00";
+        iconElement.src = creatSrc(day, hoursData.data.forecast_1h[dataIndex(i+page*12)].weather_code);
+        degreeElement.innerHTML = hoursData.data.forecast_1h[dataIndex(i+page*12)].degree + "°C";
+    }
+}
+
+export function displayDays(daysData) {
+    const dayIndex = (i) => `#day${i} .day`;
+    const dateIndex = (i) => `#day${i} .date`;
+    const dayWeatherIndex = (i) => `#day${i} .day-weather`;
+    const dayIconIndex = (i) => `#day${i} .day-icon`;
+    const nightWeatherIndex = (i) => `#day${i} .night-weather`;
+    const nightIconIndex = (i) => `#day${i} .night-icon`;
+    const windIndex = (i) => `#day${i} .wind-24h`;
+    const dataIndex = (i) => `${i}`;
+    const creatSrc = (day, code) => `./icon/little/${day}/${code}.png`
+    const week = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+    let today = new Date();
+    let DAY = today.getDay();
+    for (let i = 0; i < 8; i++){
+        const dayElement = document.querySelector(dayIndex(i));
+        const dateElement = document.querySelector(dateIndex(i));
+        const dayWeather = document.querySelector(dayWeatherIndex(i));
+        const dayIcon = document.querySelector(dayIconIndex(i));
+        const nightWeather = document.querySelector(nightWeatherIndex(i));
+        const nightIcon = document.querySelector(nightIconIndex(i));
+        const windElement = document.querySelector(windIndex(i));
+        const time = daysData.data.forecast_24h[dataIndex(i)].time;
+        if (i > 3) dayElement.innerHTML = week[(DAY + i - 2)%7];
+        dateElement.innerHTML = time.slice(5, 7) + "月" + time.slice(8, 10) + "日";
+        dayWeather.innerHTML = daysData.data.forecast_24h[dataIndex(i)].day_weather_short;
+        dayIcon.src = creatSrc("day", daysData.data.forecast_24h[dataIndex(i)].day_weather_code);
+        nightWeather.innerHTML = daysData.data.forecast_24h[dataIndex(i)].night_weather_short;
+        nightIcon.src = creatSrc("night", daysData.data.forecast_24h[dataIndex(i)].night_weather_code);
+        windElement.innerHTML = daysData.data.forecast_24h[dataIndex(i)].night_wind_direction +
+            "&nbsp;" + daysData.data.forecast_24h[dataIndex(i)].night_wind_power + "级";
+    }
+}
