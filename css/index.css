@@ -197,6 +197,7 @@ body{
 }
 #hours-up{
     margin-top: 20px;
+    margin-right: 5px;
     float: right;
     height: 24px;
     width: 24px;
@@ -232,6 +233,49 @@ body{
     margin-left: 10%;
     margin-top: 40px;
     margin-bottom: 50px;
+}
+#week-title{
+    float: left;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 720px;
+}
+.days{
+    list-style: none;
+    float: left;
+    margin: 0px;
+    height: 454px;
+    width: 92.5px;
+    text-align: center;   
+}
+.day{
+    font-size: 14px;
+    color: #384c78;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 14px;
+    line-height: 14px;
+}
+.date{
+    font-size: 12px;
+    color: #8a9baf;
+    margin-bottom: 30px;
+    height: 12px;
+    line-height: 12px;
+
+}
+.day-weather{
+    font-size: 14px;
+    color: #384c78;
+    line-height: 14px;
+    height: 14px;
+}
+.day-icon{
+    height: 30px;
+}
+.night-icon{
+    height: 30px;
 }
 #livingIndex-container{
     margin-top: 40px;
