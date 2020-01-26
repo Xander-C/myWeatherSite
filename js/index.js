@@ -45,7 +45,6 @@ async function handleFetchWeather() {
     nowWeatherElement.innerHTML = hoursData.data.forecast_1h["0"].weather;
     WindElement.innerHTML = hoursData.data.forecast_1h["0"].wind_direction + "&nbsp;" + hoursData.data.forecast_1h["0"].wind_power + "级";
     tipsElement.innerHTML = tipsData.data.tips.observe["0"];
-
     displayHours();
     bodyElement.classList.remove("flash-infinite");
 }
