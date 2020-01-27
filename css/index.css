@@ -102,7 +102,7 @@ body{
     float: left;
     height: 18px;
     width: 18px;
-    background-image: url(./images/icon.png);
+    background-image: url(/myWeatherSite/images/icon.png);
     background-position: -192px -166px;
     background-size: 234px 212px;
     margin-top: 5px;
@@ -116,7 +116,7 @@ body{
     float: left;
     height: 18px;
     width: 18px;
-    background-image: url(/images/icon.png);
+    background-image: url(/myWeatherSite/images/icon.png);
     background-position: -192px -120px;
     background-size: 234px 212px;
     margin-top: 5px;
@@ -130,7 +130,7 @@ body{
     float: left;
     height: 18px;
     width: 18px;
-    background-image: url(/images/icon.png);
+    background-image: url(/myWeatherSite/images/icon.png);
     background-position: -192px -97px;
     background-size: 234px 212px;
     margin-top: 5px;
@@ -148,7 +148,7 @@ body{
     float: right;
     height: 22px;
     width: 22px;
-    background-image: url(/images/icon.png);
+    background-image: url(/myWeatherSite/images/icon.png);
     background-position: -120px -190px;
     background-size: 234px 212px;
     margin-top: 5px;
@@ -187,7 +187,7 @@ body{
     float: right;
     height: 24px;
     width: 24px;
-    background-image: url(/images/icon.png);
+    background-image: url(/myWeatherSite/images/icon.png);
     background-position: -190px -0px;
     background-size: 234px 212px;
     cursor: pointer;
@@ -201,7 +201,7 @@ body{
     float: right;
     height: 24px;
     width: 24px;
-    background-image: url(/images/icon.png);
+    background-image: url(/myWeatherSite/images/icon.png);
     background-position: -136px -154px;
     background-size: 234px 212px;
     cursor: pointer;
