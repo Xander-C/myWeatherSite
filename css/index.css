@@ -19,7 +19,6 @@ body{
 }
 .main-container{
     height: 500px;
-    background-color: blue;
     background-image: url(../images/background.jpg);
     background-position: 50% 0px;                                     /*阴天50%*/
 }
@@ -164,7 +163,7 @@ body{
 #hours-container{
     float: left;
     margin-left: 10%;
-    margin-top: 220px;
+    margin-top: 80px;
     height: 180px;
     width: 1200px;
 }
@@ -293,12 +292,27 @@ body{
     line-height: 12px;
     height: 12px;
 }
+#chart-container{
+    position: relative;
+    top: -310px;
+    overflow: hidden;
+    width: 740px;
+    height: 174px;
+    border-width: 0px;
+}
+#chart-canvas{
+    background-color: red;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 740px;
+    height: 174px;
+}
 #livingIndex-container{
     margin-top: 40px;
     margin-right: 10%;
     float: right;
     width: 430px;
-    position: relative;
 }
 .livingIndex-title{
     float: left;

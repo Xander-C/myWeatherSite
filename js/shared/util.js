@@ -29,6 +29,22 @@ export function createAnimation(element, animationClassName,duration=0){
   }
 }
 
+export function displayNow(hoursData, tipsData) {
+    const nowTempElement = document.querySelector("#now-temp");
+    const nowWeatherElement = document.querySelector("#now-weather");
+    const WindElement = document.querySelector("#wind");
+    const tipsElement = document.querySelector("#tip");
+    const bigIconElement = document.querySelector("#weather-icon");
+    const bigSrc = (day, code) => `./icon/big/${day}/${code}.png`
+    const time = hoursData.data.forecast_1h["0"].update_time.slice(-6, -4);
+    let day = "day";
+    if(time>18||time<6) day = "night";
+    bigIconElement.src = bigSrc(day, hoursData.data.forecast_1h["0"].weather_code);
+    nowTempElement.innerHTML = hoursData.data.forecast_1h["0"].degree + "°";
+    nowWeatherElement.innerHTML = hoursData.data.forecast_1h["0"].weather;
+    WindElement.innerHTML = hoursData.data.forecast_1h["0"].wind_direction + "&nbsp;" + hoursData.data.forecast_1h["0"].wind_power + "级";
+    tipsElement.innerHTML = tipsData.data.tips.observe["0"];
+}
 
 
 export function displayHours(hoursData, page=0) {
@@ -81,4 +97,19 @@ export function displayDays(daysData) {
         windElement.innerHTML = daysData.data.forecast_24h[dataIndex(i)].night_wind_direction +
             "&nbsp;" + daysData.data.forecast_24h[dataIndex(i)].night_wind_power + "级";
     }
+}
+
+export function drawChart(daysData) {
+    const canvas = document.querySelector("#chart-canvas");
+    if (!canvas.getContext) return;
+    let crt = canvas.getContext("2d");
+    let dayDegree = [];
+    let nightDegree = [];
+    for (let i = 0; i < 8; i++)
+        dayDegree.push(parseInt(daysData.data.forecast_24h[dataIndex(i)].max_degree));
+    for (let i = 0; i < 8; i++)
+        nightDegree.push(parseInt(daysData.data.forecast_24h[dataIndex(i)].min_degree));
+    max = Math.max(...dayDegree);
+    max = Math.min(...nightDegree);
+    
 }
