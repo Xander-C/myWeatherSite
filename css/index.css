@@ -301,7 +301,6 @@ body{
     border-width: 0px;
 }
 #chart-canvas{
-    background-color: red;
     position: absolute;
     left: 0px;
     top: 0px;

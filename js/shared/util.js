@@ -101,15 +101,50 @@ export function displayDays(daysData) {
 
 export function drawChart(daysData) {
     const canvas = document.querySelector("#chart-canvas");
-    if (!canvas.getContext) return;
-    let crt = canvas.getContext("2d");
+    const x = [46.25, 138.75, 231.25, 323.75, 416.25, 508.75, 601.25, 693.75];
+    const dataIndex = (i) => `${i}`;
+    if (!canvas.getContext)
+        return;
+    const ctx = canvas.getContext("2d");
     let dayDegree = [];
     let nightDegree = [];
     for (let i = 0; i < 8; i++)
         dayDegree.push(parseInt(daysData.data.forecast_24h[dataIndex(i)].max_degree));
     for (let i = 0; i < 8; i++)
         nightDegree.push(parseInt(daysData.data.forecast_24h[dataIndex(i)].min_degree));
-    max = Math.max(...dayDegree);
-    max = Math.min(...nightDegree);
-    
+    const max = Math.max(...dayDegree);
+    const min = Math.min(...nightDegree);
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "#FCC370";
+    ctx.fillStyle = "#FCC370";
+    ctx.moveTo(x[0], 35 + 104 * (max - dayDegree[0]) / (max - min));
+    for (let i = 1; i < 8; i++)
+        ctx.lineTo(x[i], 35 + 104 * (max - dayDegree[i]) / (max - min));
+    ctx.stroke();
+    for (let i = 0; i < 8; i++){
+        ctx.beginPath();
+        ctx.arc(x[i], 35 + 104 * (max - dayDegree[i]) / (max - min), 4, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+    ctx.beginPath();
+    ctx.closePath();
+    ctx.strokeStyle = "#94CCF9";
+    ctx.fillStyle = "#94CCF9";
+    ctx.moveTo(x[0], 35 + 104 * (max - nightDegree[0]) / (max - min));
+    for (let i = 1; i < 8; i++)
+        ctx.lineTo(x[i], 35 + 104 * (max - nightDegree[i]) / (max - min));
+    ctx.stroke();
+    for (let i = 0; i < 8; i++){
+        ctx.beginPath();
+        ctx.arc(x[i], 35 + 104 * (max - nightDegree[i]) / (max - min), 4, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+    ctx.strokeStyle = "#000000";
+    ctx.fillStyle = "#000000";
+    ctx.font = "20px Arial";
+    ctx.textAlign = "center";
+    for (let i = 0; i < 8; i++){
+        ctx.fillText(daysData.data.forecast_24h[dataIndex(i)].max_degree + "°", x[i],20 + 104 * (max - dayDegree[i]) / (max - min));
+        ctx.fillText(daysData.data.forecast_24h[dataIndex(i)].min_degree + "°", x[i], 60 + 104 * (max - nightDegree[i]) / (max - min));
+    }
 }
