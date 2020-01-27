@@ -22,7 +22,7 @@ body{
     margin: 0;
     height: 500px;
     padding: 0;
-    background-image:url(/images/background.jpg);
+    background-image:url(/myWeatherSite/images/background.jpg);
     background-position: 50% 0px;                                     /*阴天50%*/
 }
 .top-container{
@@ -69,7 +69,7 @@ body{
     float: left;
     height: 16px;
     width: 16px;
-    background-image: url(/images/icon.png);
+    background-image: url(/myWeatherSite/images/icon.png);
     background-position: -216px -126px;
     background-size: 234px 212px;
     margin-right: 7px;
