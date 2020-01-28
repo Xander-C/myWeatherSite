@@ -148,3 +148,7 @@ export function drawChart(daysData) {
         ctx.fillText(daysData.data.forecast_24h[dataIndex(i)].min_degree + "°", x[i], 60 + 104 * (max - nightDegree[i]) / (max - min));
     }
 }
+
+export function displayIndex(indexData) {
+    
+}

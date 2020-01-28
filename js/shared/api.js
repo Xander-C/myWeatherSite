@@ -15,7 +15,8 @@ const createWeatherUrl = (type, province, city, county) => `${WEATHER_BASE_URL}?
 
 //发送请求
 export const requestWeatherData = async (type, province, city, county = 0) => {
-  const response = await fetch(createWeatherUrl(type, province, city, county));
-  const data = await response.json();
-  return data;
+    const response = await fetch(createWeatherUrl(type, province, city, county));
+    const data = await response.json();
+    console.log(data);
+    return data;
 }
