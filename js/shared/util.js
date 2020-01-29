@@ -35,10 +35,13 @@ export function displayNow(hoursData, tipsData) {
     const WindElement = document.querySelector("#wind");
     const tipsElement = document.querySelector("#tip");
     const bigIconElement = document.querySelector("#weather-icon");
+    const windIcon = document.querySelector("#wind-icon");
     const bigSrc = (day, code) => `./icon/big/${day}/${code}.png`
+    const windIconPosition = new Map([["北风","-192px -166px"],["东北风","-168px -192px"],["东风","-144px -192px"],["东南风","-192px -74px"],["南风","-98px -192px"],["西南风","-76px -192px"],["西风","-192px -52px"],["西北风","-30px -192px"]]);
     const time = hoursData.data.forecast_1h["0"].update_time.slice(-6, -4);
     let day = "day";
-    if(time>18||time<6) day = "night";
+    if (time > 18 || time < 6) day = "night";
+    windIcon.style.backgroundPosition = windIconPosition.get(hoursData.data.forecast_1h["0"].wind_direction);
     bigIconElement.src = bigSrc(day, hoursData.data.forecast_1h["0"].weather_code);
     nowTempElement.innerHTML = hoursData.data.forecast_1h["0"].degree + "°";
     nowWeatherElement.innerHTML = hoursData.data.forecast_1h["0"].weather;
