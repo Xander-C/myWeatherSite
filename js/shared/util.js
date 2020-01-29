@@ -149,6 +149,41 @@ export function drawChart(daysData) {
     }
 }
 
-export function displayIndex(indexData) {
-    
+export function displayIndex(indexData, page = 0) {
+    let parent = document.querySelector("#index0");
+    let pointer = parent.children[0].children[1];
+    pointer.innerHTML = indexData.data.index.clothes.name + "&nbsp;" + indexData.data.index.clothes.info;
+    pointer = parent.children[1].children[0];
+    pointer.innerHTML = indexData.data.index.clothes.detail;
+
+    parent = document.querySelector("#index1");
+    pointer = parent.children[0].children[1];
+    pointer.innerHTML = indexData.data.index.umbrella.name + "&nbsp;" + indexData.data.index.umbrella.info;
+    pointer = parent.children[1].children[0];
+    pointer.innerHTML = indexData.data.index.umbrella.detail;
+
+    parent = document.querySelector("#index2");
+    pointer = parent.children[0].children[1];
+    pointer.innerHTML = indexData.data.index.cold.name + "&nbsp;" + indexData.data.index.cold.info;
+    pointer = parent.children[1].children[0];
+    pointer.innerHTML = indexData.data.index.cold.detail;
+
+    parent = document.querySelector("#index3");
+    pointer = parent.children[0].children[1];
+    pointer.innerHTML = indexData.data.index.tourism.name + "&nbsp;" + indexData.data.index.tourism.info;
+    pointer = parent.children[1].children[0];
+    pointer.innerHTML = indexData.data.index.tourism.detail;
+
+    parent = document.querySelector("#index4");
+    pointer = parent.children[0].children[1];
+    pointer.innerHTML = indexData.data.index.sports.name + "&nbsp;" + indexData.data.index.sports.info;
+    pointer = parent.children[1].children[0];
+    pointer.innerHTML = indexData.data.index.sports.detail;
+
+    parent = document.querySelector("#index5");
+    pointer = parent.children[0].children[1];
+    pointer.innerHTML = indexData.data.index.sunscreen.name + "&nbsp;" + indexData.data.index.sunscreen.info;
+    pointer = parent.children[1].children[0];
+    pointer.innerHTML = indexData.data.index.sunscreen.detail;
+
 }

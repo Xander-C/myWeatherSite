@@ -173,6 +173,7 @@ body{
     display: block;
 }
 #hours-title{
+    color: #384c78;
     float: left;
     font-size: 18px;
     margin-top: 20px;
@@ -215,6 +216,7 @@ body{
     font-size: 16px;
 }
 .hours-time{
+    color: #384c78;
     width: 40px;
 }
 .hours-icon{
@@ -222,6 +224,7 @@ body{
     width: 40px;
 }
 .hours-tempture{
+    color: #384c78;
     width: 40px;
 }
 #week-index-container{
@@ -236,6 +239,7 @@ body{
     margin-bottom: 50px;
 }
 #week-title{
+    color: #384c78;
     float: left;
     font-size: 18px;
     margin-top: 20px;
@@ -318,19 +322,107 @@ body{
 }
 .livingIndex-title{
     float: left;
-    color: rgba(0, 0, 0, 0.78);
+    color: #384c78;
     font-size: 20px ;
     margin-bottom: 20px;
 }
-.livingIndexDetailLeft{
+.livingIndexDetail{
+    display: block;
     margin-top: 20px;
-    float: left;
     height: 136px;
     width: 47.5%;
+    overflow: hidden;
 }
-.livingIndexDetailRight{
-    margin-top: 20px;
+.Left{
+    float: left;
+}
+.Right{
     float: right;
-    height: 136px;
-    width: 47.5%;
+}
+.first-page{
+    margin-top: 0;
+    height: 100%;
+    width: 100%;
+    transition: margin-top .5s ease-in-out;
+    display: table;
+}
+.livingIndexDetail:hover .first-page{
+    margin-top: -136px;
+}
+.second-page{
+    display: table;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+}
+.detail{
+    font-size: 13px;
+    vertical-align: middle;
+    display: table-cell;
+}
+.first-page .ct-index{
+    color: #384c78;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+#index0 .first-page .icon{
+    height: 35px;
+    width: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    background-image: url(../images/icon.png);
+    background-position: -80px 0;
+    background-size: 234px 212px!important;
+}
+#index1 .first-page .icon{
+    height: 35px;
+    width: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    background-image: url(../images/icon.png);
+    background-position: 0 -154px;
+    background-size: 234px 212px!important;
+}
+#index2 .first-page .icon{
+    height: 35px;
+    width: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    background-image: url(../images/icon.png);
+    background-position: -74px -154px;
+    background-size: 234px 212px!important;
+}
+#index3 .first-page .icon{
+    height: 35px;
+    width: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    background-image: url(../images/icon.png);
+    background-position: -117px -74px;
+    background-size: 234px 212px!important;
+}
+#index4 .first-page .icon{
+    height: 35px;
+    width: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    background-image: url(../images/icon.png);
+    background-position: -37px -43px;
+    background-size: 234px 212px!important;
+}
+#index5 .first-page .icon{
+    height: 35px;
+    width: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    background-image: url(../images/icon.png);
+    background-position: 0 -43px;
+    background-size: 234px 212px!important;
 }
