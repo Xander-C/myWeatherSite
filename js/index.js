@@ -1,5 +1,5 @@
 import { requestWeatherData } from './shared/api.js';
-import { displayHours, displayDays, displayNow,drawChart, displayIndex } from './shared/util.js';
+import { displayHours, displayDays, displayNow,drawChart, displayIndex, createAnimation } from './shared/util.js';
 const bodyElement = document.querySelector("body");
 const searchElement = document.querySelector("#input");
 const nowCityElement = document.querySelector("#now-city");
@@ -8,13 +8,33 @@ var tipsData;
 var hoursData;
 var daysData;
 var indexData;
+var hoursPage = 0;
 document.querySelector("#tips-key").addEventListener("click", changeTips);
 document.querySelector("#search-city").addEventListener("click", handleFetchWeather);
 document.querySelector("#hours-up").addEventListener("click", () => {
-    displayHours(hoursData,0);
+    if (hoursPage == 1) {
+        for (let i = 0; i < 12; i++) {
+            const timeID = (i) => `#time${i}`;
+            const timeElement = document.querySelector(timeID(i));
+            const parent = timeElement.parentElement;
+            createAnimation(parent, "flipInY", 500);
+        }
+        hoursPage = 0;
+    }
+    displayHours(hoursData, 0);
+    
 });
 document.querySelector("#hours-down").addEventListener("click", () => {
-    displayHours(hoursData,1);
+    if (hoursPage == 0) {
+        for (let i = 0; i < 12; i++) {
+            const timeID = (i) => `#time${i}`;
+            const timeElement = document.querySelector(timeID(i));
+            const parent = timeElement.parentElement;
+            createAnimation(parent, "flipInY", 500);
+        }
+        hoursPage = 1;
+    }
+    displayHours(hoursData, 1);
 });
 
 

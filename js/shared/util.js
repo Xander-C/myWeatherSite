@@ -46,13 +46,13 @@ export function displayNow(hoursData, tipsData) {
     tipsElement.innerHTML = tipsData.data.tips.observe["0"];
 }
 
-
 export function displayHours(hoursData, page=0) {
     const timeID = (i) => `#time${i}`;
     const iconID = (i) => `#icon${i}`;
     const degreeID = (i) => `#degree${i}`;
     const dataIndex = (i) => `${i}`;
     const creatSrc = (day, code) => `./icon/little/${day}/${code}.png`
+
     for (let i = 0 ; i < 12 ; i++) {
         const timeElement = document.querySelector(timeID(i));
         const iconElement = document.querySelector(iconID(i));
