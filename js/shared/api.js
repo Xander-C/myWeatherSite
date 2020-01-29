@@ -20,3 +20,16 @@ export const requestWeatherData = async (type, province, city, county = 0) => {
     console.log(data);
     return data;
 }
+
+export const requestLocation = async () => {
+    var httpRequest = new XMLHttpRequest();
+    let json;
+    httpRequest.open('GET', 'https://restapi.amap.com/v3/ip?key=f87207f91f4706cf799f18c7ed9850ac', true);
+    httpRequest.send();
+    httpRequest.onreadystatechange = function () {
+        if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+            json = httpRequest.responseText;
+            console.log(json);
+        }
+    };
+}
