@@ -109,7 +109,7 @@ export function drawChart(daysData) {
     if (!canvas.getContext)
         return;
     const ctx = canvas.getContext("2d");
-    ctx.clearRect(0, 0, 740, 174);
+    ctx.clearRect(0, 0, 739, 173);
     let dayDegree = [];
     let nightDegree = [];
     for (let i = 0; i < 8; i++)
@@ -131,7 +131,7 @@ export function drawChart(daysData) {
         ctx.fill();
     }
     ctx.beginPath();
-    ctx.closePath();
+    ctx.closePath();         //上一个画笔的Path会牵连到下一笔
     ctx.strokeStyle = "#94CCF9";
     ctx.fillStyle = "#94CCF9";
     ctx.moveTo(x[0], 35 + 104 * (max - nightDegree[0]) / (max - min));
@@ -143,6 +143,8 @@ export function drawChart(daysData) {
         ctx.arc(x[i], 35 + 104 * (max - nightDegree[i]) / (max - min), 4, 0, 2 * Math.PI);
         ctx.fill();
     }
+    ctx.beginPath();
+    ctx.closePath();
     ctx.strokeStyle = "#000000";
     ctx.fillStyle = "#000000";
     ctx.font = "20px Arial";
@@ -154,40 +156,43 @@ export function drawChart(daysData) {
 }
 
 export function displayIndex(indexData, page = 0) {
-    let parent = document.querySelector("#index0");
-    let pointer = parent.children[0].children[1];
-    pointer.innerHTML = indexData.data.index.clothes.name + "&nbsp;" + indexData.data.index.clothes.info;
-    pointer = parent.children[1].children[0];
-    pointer.innerHTML = indexData.data.index.clothes.detail;
-
-    parent = document.querySelector("#index1");
-    pointer = parent.children[0].children[1];
-    pointer.innerHTML = indexData.data.index.umbrella.name + "&nbsp;" + indexData.data.index.umbrella.info;
-    pointer = parent.children[1].children[0];
-    pointer.innerHTML = indexData.data.index.umbrella.detail;
-
-    parent = document.querySelector("#index2");
-    pointer = parent.children[0].children[1];
-    pointer.innerHTML = indexData.data.index.cold.name + "&nbsp;" + indexData.data.index.cold.info;
-    pointer = parent.children[1].children[0];
-    pointer.innerHTML = indexData.data.index.cold.detail;
-
-    parent = document.querySelector("#index3");
-    pointer = parent.children[0].children[1];
-    pointer.innerHTML = indexData.data.index.tourism.name + "&nbsp;" + indexData.data.index.tourism.info;
-    pointer = parent.children[1].children[0];
-    pointer.innerHTML = indexData.data.index.tourism.detail;
-
-    parent = document.querySelector("#index4");
-    pointer = parent.children[0].children[1];
-    pointer.innerHTML = indexData.data.index.sports.name + "&nbsp;" + indexData.data.index.sports.info;
-    pointer = parent.children[1].children[0];
-    pointer.innerHTML = indexData.data.index.sports.detail;
-
-    parent = document.querySelector("#index5");
-    pointer = parent.children[0].children[1];
-    pointer.innerHTML = indexData.data.index.sunscreen.name + "&nbsp;" + indexData.data.index.sunscreen.info;
-    pointer = parent.children[1].children[0];
-    pointer.innerHTML = indexData.data.index.sunscreen.detail;
-
-}
+  
+    const targets = [
+      {
+        selector: "#index0",
+        name: "clothes"
+      },
+      {
+        selector: "#index0",
+        name:"umbrella"
+      },
+      {
+        selector: "#index2",
+        name:"cold"
+      },
+      {
+        selector: "#index3",
+        name:"tourism"
+      },
+      {
+        selector: "#index4",
+        name:"sports"
+      },
+      {
+        selector: "#index5",
+        name:"sunscreen"
+      }
+    ];
+  
+    for (const item of targets) {
+      const { name, info, detail } = indexData.data.index[item.name];
+      const parent = document.querySelector(item.selector);
+  
+      const pointer1 = parent.children[0].children[1];
+      const pointer2 = parent.children[1].children[0];
+  
+      pointer1.innerHTML = name + "&nbsp;" + info;
+      pointer2.innerHTML = detail;
+    }
+  }
+  

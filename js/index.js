@@ -37,7 +37,6 @@ document.querySelector("#hours-down").addEventListener("click", () => {
     displayHours(hoursData, 1);
 });
 
-requestLocation();
 
 handleFetchWeather();
 
