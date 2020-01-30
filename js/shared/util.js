@@ -109,6 +109,7 @@ export function drawChart(daysData) {
     if (!canvas.getContext)
         return;
     const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, 740, 174);
     let dayDegree = [];
     let nightDegree = [];
     for (let i = 0; i < 8; i++)
