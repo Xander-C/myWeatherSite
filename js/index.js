@@ -1,4 +1,4 @@
-import { requestWeatherData, requestLocation } from './shared/api.js';
+import { requestWeatherData } from './shared/api.js';
 import { displayHours, displayDays, displayNow,drawChart, displayIndex, createAnimation } from './shared/util.js';
 const bodyElement = document.querySelector("body");
 const searchElement = document.querySelector("#input");
