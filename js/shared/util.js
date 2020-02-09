@@ -163,7 +163,7 @@ export function displayIndex(indexData, page = 0) {
         name: "clothes"
       },
       {
-        selector: "#index0",
+        selector: "#index1",
         name:"umbrella"
       },
       {
