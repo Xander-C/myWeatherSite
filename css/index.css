@@ -10,7 +10,6 @@ body{
     float: left;
     margin-top: 5px;
     height: 50px;
-    margin-left: 10%;
 }
 .flash-infinite{
   animation-name: flash;
@@ -19,7 +18,6 @@ body{
 }
 .main-container{
     height: 500px;
-    width: 100%;
     background-image: url(../images/background.jpg);
     background-position: 50% 0px;                                     /*阴天50%*/
 }
@@ -29,7 +27,6 @@ body{
 }
 .city-container{
     float: right;
-    margin-right: 8%;
 }
 #now-city{
     line-height: 60px;
@@ -78,12 +75,11 @@ body{
 }
 #weather-icon{
     float: right;
-    margin-right: 300px;
+    margin-right: 200px;
     margin-top: 30px;
 }
 .now{
     margin-top: 80px;
-    margin-left: 150px;
     color: white;
 }
 #now-temp{
@@ -163,7 +159,6 @@ body{
 }
 #hours-container{
     float: left;
-    margin-left: 10%;
     margin-top: 80px;
     height: 180px;
     width: 1200px;
@@ -229,7 +224,6 @@ body{
 }
 #week-index-container{
     width: 1200px;
-    margin-left: 10%;
 }
 #week-container{
     float: left;
@@ -425,4 +419,9 @@ body{
     background-image: url(../images/icon.png);
     background-position: 0 -43px;
     background-size: 234px 212px!important;
+}
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }

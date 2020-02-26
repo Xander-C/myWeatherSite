@@ -12,243 +12,247 @@
 
 <body>
     <div class="main-container">
-        <div class="top-container">
-            <img src="./images/logo.png" class="logo">
-            <div class="city-container">
-                <span class="position-icon"></span>
-                <span id="now-city"></span>
-                <input id="input" type="input" value="广西 梧州 藤县" placeholder="广西 梧州 藤县">
-                <button id="search-city">搜索</button>
-            </div>
-        </div>
-        <div class="now">
-            <div class="word">
-                <div class="summerize">
-                    <span id="now-temp"></span>
-                    <span id="now-weather"></span>
-                </div>
-                <div class="now-detail">
-                    <span id="wind-icon"></span>
-                    <span id="wind"></span>
-                    <span id="humidity-icon"></span>
-                    <span id="humidity">湿度&nbsp;71%</span>
-                    <span id="baro-icon"></span>
-                    <span id="baro">气压&nbsp;1009.0hPa</span>
-                </div>
-                <div class="tips">
-                    <span>●</span>
-                    <span id="tip"></span>
-                    <span id="tips-key"></span>
+        <div class="container">
+            <div class="top-container">
+                <img src="./images/logo.png" class="logo">
+                <div class="city-container">
+                    <span class="position-icon"></span>
+                    <span id="now-city"></span>
+                    <input id="input" type="input" value="广西 梧州 藤县" placeholder="广西 梧州 藤县">
+                    <button id="search-city">搜索</button>
                 </div>
             </div>
-            <img id="weather-icon">
+            <div class="now">
+                <div class="word">
+                    <div class="summerize">
+                        <span id="now-temp"></span>
+                        <span id="now-weather"></span>
+                    </div>
+                    <div class="now-detail">
+                        <span id="wind-icon"></span>
+                        <span id="wind"></span>
+                        <span id="humidity-icon"></span>
+                        <span id="humidity">湿度&nbsp;71%</span>
+                        <span id="baro-icon"></span>
+                        <span id="baro">气压&nbsp;1009.0hPa</span>
+                    </div>
+                    <div class="tips">
+                        <span>●</span>
+                        <span id="tip"></span>
+                        <span id="tips-key"></span>
+                    </div>
+                </div>
+                <img id="weather-icon">
+            </div>
         </div>
     </div>
-    <div class="detail">
-        <div class="detail-container" id="hours-container">
-            <div id="hours-title-container">
-                <div id="hours-title">●&nbsp;逐小时预报</div>
-                <div id="hours-down"></div>
-                <div id="hours-up"></div>
-            </div>
-            <div id="hours">
-                <div class="hours animated">
-                    <div class="hours-time" id="time0"></div>
-                    <img class="hours-icon" id="icon0">
-                    <div class="hours-tempture" id="degree0"></div>
+    <div class="container">
+        <div class="detail">
+            <div class="detail-container" id="hours-container">
+                <div id="hours-title-container">
+                    <div id="hours-title">●&nbsp;逐小时预报</div>
+                    <div id="hours-down"></div>
+                    <div id="hours-up"></div>
                 </div>
-                <div class="hours animated">
-                    <div class="hours-time" id="time1"></div>
-                    <img class="hours-icon" id="icon1">
-                    <div class="hours-tempture" id="degree1"></div>
-                </div>
-                <div class="hours animated">
-                    <div class="hours-time" id="time2"></div>
-                    <img class="hours-icon" id="icon2">
-                    <div class="hours-tempture" id="degree2"></div>
-                </div>
-                <div class="hours animated">
-                    <div class="hours-time" id="time3"></div>
-                    <img class="hours-icon" id="icon3">
-                    <div class="hours-tempture" id="degree3"></div>
-                </div>
-                <div class="hours animated">
-                    <div class="hours-time" id="time4"></div>
-                    <img class="hours-icon" id="icon4">
-                    <div class="hours-tempture" id="degree4"></div>
-                </div>
-                <div class="hours animated">
-                    <div class="hours-time" id="time5"></div>
-                    <img class="hours-icon" id="icon5">
-                    <div class="hours-tempture" id="degree5"></div>
-                </div>
-                <div class="hours animated">
-                    <div class="hours-time" id="time6"></div>
-                    <img class="hours-icon" id="icon6">
-                    <div class="hours-tempture" id="degree6"></div>
-                </div>
-                <div class="hours animated">
-                    <div class="hours-time" id="time7"></div>
-                    <img class="hours-icon" id="icon7">
-                    <div class="hours-tempture" id="degree7"></div>
-                </div>
-                <div class="hours animated">
-                    <div class="hours-time" id="time8"></div>
-                    <img class="hours-icon" id="icon8">
-                    <div class="hours-tempture" id="degree8"></div>
-                </div>
-                <div class="hours animated">
-                    <div class="hours-time" id="time9"></div>
-                    <img class="hours-icon" id="icon9">
-                    <div class="hours-tempture" id="degree9"></div>
-                </div>
-                <div class="hours animated">
-                    <div class="hours-time" id="time10"></div>
-                    <img class="hours-icon" id="icon10">
-                    <div class="hours-tempture" id="degree10"></div>
-                </div>
-                <div class="hours animated">
-                    <div class="hours-time" id="time11"></div>
-                    <img class="hours-icon" id="icon11">
-                    <div class="hours-tempture" id="degree11"></div>
-                </div>
-            </div>
-        </div>
-        <div id="week-index-container">
-            <div class="detail-container" id="week-container">
-                <div id="week-title">●&nbsp;7日天气预报</div>
-                <ol>
-                    <li class="days" id="day0">
-                        <div class="day">昨天</div>
-                        <div class="date"></div>
-                        <div class="day-weather"></div>
-                        <img class="day-icon"></img>
-                        <img class="night-icon"></img>
-                        <div class="night-weather"></div>
-                        <div class="wind-24h"></div>
-                    </li>
-                    <li class="days" id="day1">
-                        <div class="day">今天</div>
-                        <div class="date"></div>
-                        <div class="day-weather"></div>
-                        <img class="day-icon"></img>
-                        <img class="night-icon"></img>
-                        <div class="night-weather"></div>
-                        <div class="wind-24h"></div>
-                    </li>
-                    <li class="days" id="day2">
-                        <div class="day">明天</div>
-                        <div class="date"></div>
-                        <div class="day-weather"></div>
-                        <img class="day-icon"></img>
-                        <img class="night-icon"></img>
-                        <div class="night-weather"></div>
-                        <div class="wind-24h"></div>
-                    </li>
-                    <li class="days" id="day3">
-                        <div class="day">后天</div>
-                        <div class="date"></div>
-                        <div class="day-weather"></div>
-                        <img class="day-icon"></img>
-                        <img class="night-icon"></img>
-                        <div class="night-weather"></div>
-                        <div class="wind-24h"></div>
-                    </li>
-                    <li class="days" id="day4">
-                        <div class="day"></div>
-                        <div class="date"></div>
-                        <div class="day-weather"></div>
-                        <img class="day-icon"></img>
-                        <img class="night-icon"></img>
-                        <div class="night-weather"></div>
-                        <div class="wind-24h"></div>
-                    </li>
-                    <li class="days" id="day5">
-                        <div class="day"></div>
-                        <div class="date"></div>
-                        <div class="day-weather"></div>
-                        <img class="day-icon"></img>
-                        <img class="night-icon"></img>
-                        <div class="night-weather"></div>
-                        <div class="wind-24h"></div>
-                    </li>
-                    <li class="days" id="day6">
-                        <div class="day"></div>
-                        <div class="date"></div>
-                        <div class="day-weather"></div>
-                        <img class="day-icon"></img>
-                        <img class="night-icon"></img>
-                        <div class="night-weather"></div>
-                        <div class="wind-24h"></div>
-                    </li>
-                    <li class="days" id="day7">
-                        <div class="day"></div>
-                        <div class="date"></div>
-                        <div class="day-weather"></div>
-                        <img class="day-icon"></img>
-                        <img class="night-icon"></img>
-                        <div class="night-weather"></div>
-                        <div class="wind-24h"></div>
-                    </li>
-                </ol>
-                <div id="chart-container">
-                    <canvas id="chart-canvas" width="740" height="174"></canvas>
+                <div id="hours">
+                    <div class="hours animated">
+                        <div class="hours-time" id="time0"></div>
+                        <img class="hours-icon" id="icon0">
+                        <div class="hours-tempture" id="degree0"></div>
+                    </div>
+                    <div class="hours animated">
+                        <div class="hours-time" id="time1"></div>
+                        <img class="hours-icon" id="icon1">
+                        <div class="hours-tempture" id="degree1"></div>
+                    </div>
+                    <div class="hours animated">
+                        <div class="hours-time" id="time2"></div>
+                        <img class="hours-icon" id="icon2">
+                        <div class="hours-tempture" id="degree2"></div>
+                    </div>
+                    <div class="hours animated">
+                        <div class="hours-time" id="time3"></div>
+                        <img class="hours-icon" id="icon3">
+                        <div class="hours-tempture" id="degree3"></div>
+                    </div>
+                    <div class="hours animated">
+                        <div class="hours-time" id="time4"></div>
+                        <img class="hours-icon" id="icon4">
+                        <div class="hours-tempture" id="degree4"></div>
+                    </div>
+                    <div class="hours animated">
+                        <div class="hours-time" id="time5"></div>
+                        <img class="hours-icon" id="icon5">
+                        <div class="hours-tempture" id="degree5"></div>
+                    </div>
+                    <div class="hours animated">
+                        <div class="hours-time" id="time6"></div>
+                        <img class="hours-icon" id="icon6">
+                        <div class="hours-tempture" id="degree6"></div>
+                    </div>
+                    <div class="hours animated">
+                        <div class="hours-time" id="time7"></div>
+                        <img class="hours-icon" id="icon7">
+                        <div class="hours-tempture" id="degree7"></div>
+                    </div>
+                    <div class="hours animated">
+                        <div class="hours-time" id="time8"></div>
+                        <img class="hours-icon" id="icon8">
+                        <div class="hours-tempture" id="degree8"></div>
+                    </div>
+                    <div class="hours animated">
+                        <div class="hours-time" id="time9"></div>
+                        <img class="hours-icon" id="icon9">
+                        <div class="hours-tempture" id="degree9"></div>
+                    </div>
+                    <div class="hours animated">
+                        <div class="hours-time" id="time10"></div>
+                        <img class="hours-icon" id="icon10">
+                        <div class="hours-tempture" id="degree10"></div>
+                    </div>
+                    <div class="hours animated">
+                        <div class="hours-time" id="time11"></div>
+                        <img class="hours-icon" id="icon11">
+                        <div class="hours-tempture" id="degree11"></div>
+                    </div>
                 </div>
             </div>
-            <div id="livingIndex-container">
-                <div id="livingIndex-title">●&nbsp;生活指数</div>
-                <div class="detail-container livingIndexDetail Left" id="index0">
-                    <div class="first-page">
-                        <div class="icon"></div>
-                        <div class="ct-index"></div>
-                    </div>
-                    <div class="second-page">
-                        <span class="detail"></span>
+            <div id="week-index-container">
+                <div class="detail-container" id="week-container">
+                    <div id="week-title">●&nbsp;7日天气预报</div>
+                    <ol>
+                        <li class="days" id="day0">
+                            <div class="day">昨天</div>
+                            <div class="date"></div>
+                            <div class="day-weather"></div>
+                            <img class="day-icon"></img>
+                            <img class="night-icon"></img>
+                            <div class="night-weather"></div>
+                            <div class="wind-24h"></div>
+                        </li>
+                        <li class="days" id="day1">
+                            <div class="day">今天</div>
+                            <div class="date"></div>
+                            <div class="day-weather"></div>
+                            <img class="day-icon"></img>
+                            <img class="night-icon"></img>
+                            <div class="night-weather"></div>
+                            <div class="wind-24h"></div>
+                        </li>
+                        <li class="days" id="day2">
+                            <div class="day">明天</div>
+                            <div class="date"></div>
+                            <div class="day-weather"></div>
+                            <img class="day-icon"></img>
+                            <img class="night-icon"></img>
+                            <div class="night-weather"></div>
+                            <div class="wind-24h"></div>
+                        </li>
+                        <li class="days" id="day3">
+                            <div class="day">后天</div>
+                            <div class="date"></div>
+                            <div class="day-weather"></div>
+                            <img class="day-icon"></img>
+                            <img class="night-icon"></img>
+                            <div class="night-weather"></div>
+                            <div class="wind-24h"></div>
+                        </li>
+                        <li class="days" id="day4">
+                            <div class="day"></div>
+                            <div class="date"></div>
+                            <div class="day-weather"></div>
+                            <img class="day-icon"></img>
+                            <img class="night-icon"></img>
+                            <div class="night-weather"></div>
+                            <div class="wind-24h"></div>
+                        </li>
+                        <li class="days" id="day5">
+                            <div class="day"></div>
+                            <div class="date"></div>
+                            <div class="day-weather"></div>
+                            <img class="day-icon"></img>
+                            <img class="night-icon"></img>
+                            <div class="night-weather"></div>
+                            <div class="wind-24h"></div>
+                        </li>
+                        <li class="days" id="day6">
+                            <div class="day"></div>
+                            <div class="date"></div>
+                            <div class="day-weather"></div>
+                            <img class="day-icon"></img>
+                            <img class="night-icon"></img>
+                            <div class="night-weather"></div>
+                            <div class="wind-24h"></div>
+                        </li>
+                        <li class="days" id="day7">
+                            <div class="day"></div>
+                            <div class="date"></div>
+                            <div class="day-weather"></div>
+                            <img class="day-icon"></img>
+                            <img class="night-icon"></img>
+                            <div class="night-weather"></div>
+                            <div class="wind-24h"></div>
+                        </li>
+                    </ol>
+                    <div id="chart-container">
+                        <canvas id="chart-canvas" width="740" height="174"></canvas>
                     </div>
                 </div>
-                <div class="detail-container livingIndexDetail Right" id="index1">
-                    <div class="first-page">
-                        <div class="icon"></div>
-                        <div class="ct-index"></div>
+                <div id="livingIndex-container">
+                    <div id="livingIndex-title">●&nbsp;生活指数</div>
+                    <div class="detail-container livingIndexDetail Left" id="index0">
+                        <div class="first-page">
+                            <div class="icon"></div>
+                            <div class="ct-index"></div>
+                        </div>
+                        <div class="second-page">
+                            <span class="detail"></span>
+                        </div>
                     </div>
-                    <div class="second-page">
-                        <span class="detail"></span>
+                    <div class="detail-container livingIndexDetail Right" id="index1">
+                        <div class="first-page">
+                            <div class="icon"></div>
+                            <div class="ct-index"></div>
+                        </div>
+                        <div class="second-page">
+                            <span class="detail"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="detail-container livingIndexDetail Left" id="index2">
-                    <div class="first-page">
-                        <div class="icon"></div>
-                        <div class="ct-index"></div>
+                    <div class="detail-container livingIndexDetail Left" id="index2">
+                        <div class="first-page">
+                            <div class="icon"></div>
+                            <div class="ct-index"></div>
+                        </div>
+                        <div class="second-page">
+                            <span class="detail"></span>
+                        </div>
                     </div>
-                    <div class="second-page">
-                        <span class="detail"></span>
+                    <div class="detail-container livingIndexDetail Right" id="index3">
+                        <div class="first-page">
+                            <div class="icon"></div>
+                            <div class="ct-index"></div>
+                        </div>
+                        <div class="second-page">
+                            <span class="detail"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="detail-container livingIndexDetail Right" id="index3">
-                    <div class="first-page">
-                        <div class="icon"></div>
-                        <div class="ct-index"></div>
+                    <div class="detail-container livingIndexDetail Left" id="index4">
+                        <div class="first-page">
+                            <div class="icon"></div>
+                            <div class="ct-index"></div>
+                        </div>
+                        <div class="second-page">
+                            <span class="detail"></span>
+                        </div>
                     </div>
-                    <div class="second-page">
-                        <span class="detail"></span>
-                    </div>
-                </div>
-                <div class="detail-container livingIndexDetail Left" id="index4">
-                    <div class="first-page">
-                        <div class="icon"></div>
-                        <div class="ct-index"></div>
-                    </div>
-                    <div class="second-page">
-                        <span class="detail"></span>
-                    </div>
-                </div>
-                <div class="detail-container livingIndexDetail Right" id="index5">
-                    <div class="first-page">
-                        <div class="icon"></div>
-                        <div class="ct-index"></div>
-                    </div>
-                    <div class="second-page">
-                        <span class="detail"></span>
+                    <div class="detail-container livingIndexDetail Right" id="index5">
+                        <div class="first-page">
+                            <div class="icon"></div>
+                            <div class="ct-index"></div>
+                        </div>
+                        <div class="second-page">
+                            <span class="detail"></span>
+                        </div>
                     </div>
                 </div>
             </div>
