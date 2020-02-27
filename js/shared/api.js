@@ -3,7 +3,7 @@
  */
 
 // 这是天气api的地址
-const WEATHER_BASE_URL = 'http://47.98.249.99:9092/';
+const WEATHER_BASE_URL = 'http://xanderc.top:9092/';
 
 /**
  * 
