@@ -3,7 +3,7 @@
  */
 
 // 这是天气api的地址
-const WEATHER_BASE_URL = 'https://my-weather12138.herokuapp.com/';
+const WEATHER_BASE_URL = 'http://47.98.249.99:9092/';
 
 /**
  * 
