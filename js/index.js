@@ -58,6 +58,11 @@ async function handleFetchWeather() {
     hoursData = p["1"];
     tipsData = p["2"];
     indexData = p["3"];
+    if (daysData.data.forecast_24h["0"] == null) {
+        bodyElement.classList.remove("flash-infinite");
+        alert("输入的城市不存在");
+        return;
+    }
     displayNow(hoursData,tipsData);
     displayHours(hoursData, 0);
     displayDays(daysData);
